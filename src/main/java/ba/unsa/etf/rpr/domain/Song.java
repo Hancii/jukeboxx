@@ -6,7 +6,7 @@ public class Song implements Idable {
 
     private int id;
 
-    private String song;
+    private String name;
 
     private String link;
 
@@ -16,9 +16,9 @@ public class Song implements Idable {
 
     public void setId(int id) {this.id = id;}
 
-    public String getSong() {return song;}
+    public String getName() {return name;}
 
-    public void setSong(String songs) {this.song = songs;}
+    public void setName(String songs) {this.name = songs;}
 
     public String getLink() {return link;}
 
@@ -30,7 +30,12 @@ public class Song implements Idable {
 
     @Override
     public String toString() {
-        return "nesto";
+        return "Song{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", link='" + link + '\'' +
+                ", singer=" + singer +
+                '}';
     }
 
     @Override
@@ -43,6 +48,6 @@ public class Song implements Idable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, song, link, singer);
+        return Objects.hash(id, name, link, singer);
     }
 }

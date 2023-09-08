@@ -2,11 +2,11 @@ package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
-public class Singer implements Idable{
+public class Singer implements Idable {
 
     private int id;
 
-    private String singer;
+    private String name;
 
     private Category category;
 
@@ -14,9 +14,9 @@ public class Singer implements Idable{
 
     public void setId(int id) {this.id = id;}
 
-    public String getSinger() {return singer;}
+    public String getName() {return name;}
 
-    public void setSinger(String singer) {this.singer = singer;}
+    public void setName(String name) {this.name = name;}
 
     public Category getCategory() {return category;}
 
@@ -24,7 +24,11 @@ public class Singer implements Idable{
 
     @Override
     public String toString() {
-        return "nesta";
+        return "Singer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", category=" + category +
+                '}';
     }
 
     @Override
@@ -37,6 +41,6 @@ public class Singer implements Idable{
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, singer, category);
+        return Objects.hash(id, name, category);
     }
 }
