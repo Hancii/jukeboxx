@@ -18,7 +18,7 @@ public class Song implements Idable {
 
     public String getName() {return name;}
 
-    public void setName(String songs) {this.name = songs;}
+    public void setName(String name) {this.name = name;}
 
     public String getLink() {return link;}
 
