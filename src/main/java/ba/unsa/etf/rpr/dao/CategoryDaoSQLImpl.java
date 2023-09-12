@@ -10,16 +10,25 @@ import java.util.TreeMap;
 
 public class CategoryDaoSQLImpl extends AbstractDao<Category> implements CategoryDao {
 
-    public CategoryDaoSQLImpl() {
+    private static CategoryDaoSQLImpl instance = null;
+
+    private CategoryDaoSQLImpl() {
         super("category");
+    }
+
+    public static CategoryDao getInstance() {
+        if (instance == null) {
+            instance = new CategoryDaoSQLImpl();
+        }
+        return instance;
     }
 
     @Override
     public Category row2object(ResultSet rs) throws JukeBoxException {
         try {
             Category category = new Category();
-            category.setId(rs.getInt(1)); // "id"
-            category.setName(rs.getString(2));
+            category.setId(rs.getInt("id")); // "id"
+            category.setName(rs.getString("name"));
             return category;
         } catch (SQLException e) {
             e.printStackTrace();
