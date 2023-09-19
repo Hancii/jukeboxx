@@ -14,7 +14,11 @@ public class SingerManager {
             throw new JukeBoxException("Singer not valid");
         }
     }
-
+    /**
+     * Method that lets us get all the singers from the database
+     * @return
+     * @throws JukeBoxException
+     */
     public List<Singer> getAll() throws JukeBoxException {
         return DaoFactory.singerDao().getAll();
     }
