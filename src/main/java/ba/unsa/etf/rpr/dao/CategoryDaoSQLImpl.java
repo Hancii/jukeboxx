@@ -23,24 +23,5 @@ public class CategoryDaoSQLImpl extends AbstractDao<Category> implements Categor
         return instance;
     }
 
-    @Override
-    public Category row2object(ResultSet rs) throws JukeBoxException {
-        try {
-            Category category = new Category();
-            category.setId(rs.getInt("id")); // "id"
-            category.setName(rs.getString("name"));
-            return category;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new JukeBoxException("Cannot convert Category row to object.", e);
-        }
-    }
 
-    @Override
-    public Map<String, Object> object2row(Category category) {
-        Map<String, Object> row = new TreeMap<>();
-        row.put("id", category.getId());
-        row.put("name", category.getName());
-        return row;
-    }
 }
