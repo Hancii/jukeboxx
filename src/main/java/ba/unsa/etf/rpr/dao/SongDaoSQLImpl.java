@@ -43,7 +43,12 @@ public class SongDaoSQLImpl extends AbstractDao<Song> implements SongDao {
             throw new JukeBoxException("Cannot convert Song row to object.", e);
         }
     }
-
+    /**
+     * Converts results set into Song object by reading appropriate columns
+     *
+     * @param  song the song to convert to Map
+     * @return      map that is converted from Song object
+     * */
     @Override
     public Map<String, Object> object2row(Song song) throws JukeBoxException {
         Map<String, Object> row = new TreeMap<>();
