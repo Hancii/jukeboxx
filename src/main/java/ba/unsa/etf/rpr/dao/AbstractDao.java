@@ -159,6 +159,15 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
+    public T executeQueryUnique(String query, Object[] params) throws JukeBoxException {
+        List<T> result = executeQuery(query, params);
+        if (result != null && result.size() == 1) {
+            return result.get(0);
+        } else {
+            throw new JukeBoxException("Object not found");
+        }
+    }
+
 
 }
 
