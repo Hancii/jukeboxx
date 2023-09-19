@@ -24,5 +24,12 @@ public class SongManager {
         return DaoFactory.songDao().add(song);
     }
 
+    public Song update(Song song) throws JukeBoxException {
+        validateSong(song);
+
+        return DaoFactory.songDao().update(song);
+    }
+
+
 
 }
