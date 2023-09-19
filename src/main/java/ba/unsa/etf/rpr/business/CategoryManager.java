@@ -27,7 +27,7 @@ public class CategoryManager {
         return categoryDao.getAll();
     }
     /**
-     * Method that lets us get add category to  database
+     * Method that lets us add category to  database
      * @return
      * @throws JukeBoxException
      */
