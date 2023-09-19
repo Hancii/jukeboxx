@@ -23,7 +23,12 @@ public class SongDaoSQLImpl extends AbstractDao<Song> implements SongDao {
         }
         return instance;
     }
-
+    /**
+     * Converts results set into songs object by reading appropriate columns
+     *
+     * @param  rs the result set to convert
+     * @return      song that is converted from result set
+     * */
     @Override
     public Song row2object(ResultSet rs) throws JukeBoxException {
         try {
