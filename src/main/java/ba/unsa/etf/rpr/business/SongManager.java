@@ -17,7 +17,11 @@ public class SongManager {
     public List<Song> getAll() throws JukeBoxException {
         return DaoFactory.songDao().getAll();
     }
-
+    /**
+     * Method that lets us add song to  database
+     * @return
+     * @throws JukeBoxException
+     */
     public Song add(Song song) throws JukeBoxException {
         validateSong(song);
 
