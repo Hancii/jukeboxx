@@ -29,5 +29,11 @@ public class SingerManager {
         return DaoFactory.singerDao().add(singer);
     }
 
+    public Singer update(Singer singer) throws JukeBoxException {
+        validateSinger(singer);
+
+        return DaoFactory.singerDao().update(singer);
+    }
+
 
 }
