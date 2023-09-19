@@ -52,5 +52,9 @@ public class SingerDaoSQLImpl extends AbstractDao<Singer> implements SingerDao {
         return row;
     }
 
-
+    @Override
+    public List<Singer> searchByCategory(Category category) throws JukeBoxException {
+//        return executeQuery("SELECT * FROM " + this.tableName + " WHERE category_id = ?", new Object[]{category.getId()});
+        return null;
+    }
 }
