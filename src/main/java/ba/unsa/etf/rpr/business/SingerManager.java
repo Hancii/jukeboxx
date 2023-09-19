@@ -36,7 +36,12 @@ public class SingerManager {
 
         return DaoFactory.singerDao().add(singer);
     }
-
+    /**
+     * Method which allows us to update singer
+     * in the Singer table
+     * @param singer we want to update
+     * @throws JukeBoxException
+     */
     public Singer update(Singer singer) throws JukeBoxException {
         validateSinger(singer);
 
