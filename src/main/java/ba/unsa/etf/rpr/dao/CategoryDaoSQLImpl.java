@@ -43,5 +43,17 @@ public class CategoryDaoSQLImpl extends AbstractDao<Category> implements Categor
     }
 
 
-
+    /**
+     * Converts results set into Category object by reading appropriate columns
+     *
+     * @param  category the category to convert to Map
+     * @return      map that is converted from Category object
+     * */
+    @Override
+    public Map<String, Object> object2row(Category category) {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", category.getId());
+        row.put("name", category.getName());
+        return row;
+    }
 }
