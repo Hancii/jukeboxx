@@ -15,4 +15,6 @@ public interface Dao<T> {
     void delete(int id) throws JukeBoxException;
 
     List<T> getAll() throws JukeBoxException;
+
+    int count() throws JukeBoxException;
 }
