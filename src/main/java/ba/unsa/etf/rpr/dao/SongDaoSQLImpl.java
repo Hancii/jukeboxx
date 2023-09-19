@@ -39,5 +39,14 @@ public class SongDaoSQLImpl extends AbstractDao<Song> implements SongDao {
         }
     }
 
+    @Override
+    public Map<String, Object> object2row(Song song) throws JukeBoxException {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", song.getId());
+        row.put("name", song.getName());
+        row.put("link", song.getLink());
+        row.put("singer_id", song.getSinger().getId());
+        return row;
+    }
 
 }
