@@ -49,4 +49,8 @@ public class SongDaoSQLImpl extends AbstractDao<Song> implements SongDao {
         return row;
     }
 
+    @Override
+    public List<Song> getByNameLink(String name, String link) throws JukeBoxException {
+        return null;
+    }
 }
