@@ -30,12 +30,7 @@ public class Song implements Idable {
 
     @Override
     public String toString() {
-        return "Song{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", link='" + link + '\'' +
-                ", singer=" + singer +
-                '}';
+        return id + " " + name;
     }
 
     @Override
