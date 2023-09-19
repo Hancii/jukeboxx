@@ -38,7 +38,12 @@ public class CategoryManager {
         validateCategoryName(category.getName());
         return categoryDao.add(category);
     }
-
+    /**
+     * Method which allows us to update a category
+     * in the Category table
+     * @param category we want to update
+     * @throws JukeBoxException
+     */
     public Category update(Category category) throws JukeBoxException {
         validateCategoryName(category.getName());
         return categoryDao.update(category);
