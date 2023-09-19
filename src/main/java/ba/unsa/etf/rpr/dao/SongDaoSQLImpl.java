@@ -24,5 +24,20 @@ public class SongDaoSQLImpl extends AbstractDao<Song> implements SongDao {
         return instance;
     }
 
+    @Override
+    public Song row2object(ResultSet rs) throws JukeBoxException {
+        try {
+            Song song = new Song();
+            song.setId(rs.getInt("id"));
+            song.setName(rs.getString("name"));
+            song.setLink(rs.getString("link"));
+            song.setSinger(DaoFactory.singerDao().getById(rs.getInt("singer_id")));
+            return song;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new JukeBoxException("Cannot convert Song row to object.", e);
+        }
+    }
+
 
 }
