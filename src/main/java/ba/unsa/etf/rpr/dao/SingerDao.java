@@ -8,7 +8,5 @@ import java.util.List;
 
 public interface SingerDao extends Dao<Singer> {
 
-    List<Singer> searchByText(String text) throws JukeBoxException;
-
     List<Singer> searchByCategory(Category category) throws JukeBoxException;
 }
