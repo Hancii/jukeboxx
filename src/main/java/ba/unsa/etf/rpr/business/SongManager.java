@@ -18,6 +18,11 @@ public class SongManager {
         return DaoFactory.songDao().getAll();
     }
 
+    public Song add(Song song) throws JukeBoxException {
+        validateSong(song);
+
+        return DaoFactory.songDao().add(song);
+    }
 
 
 }
