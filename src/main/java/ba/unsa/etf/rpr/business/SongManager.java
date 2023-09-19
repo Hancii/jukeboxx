@@ -29,7 +29,12 @@ public class SongManager {
 
         return DaoFactory.songDao().update(song);
     }
-
+    /**
+     * Method which allows us to delete a song from
+     * the database that has the provided id
+     * @param id of the element we want to delete
+     * @throws JukeBoxException
+     */
     public void delete(int id) throws JukeBoxException {
         DaoFactory.singerDao().delete(id);
     }
