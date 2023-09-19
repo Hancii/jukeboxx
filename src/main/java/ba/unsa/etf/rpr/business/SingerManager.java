@@ -35,5 +35,8 @@ public class SingerManager {
         return DaoFactory.singerDao().update(singer);
     }
 
+    public void delete(int id) throws JukeBoxException {
+        DaoFactory.singerDao().delete(id);
+    }
 
 }
