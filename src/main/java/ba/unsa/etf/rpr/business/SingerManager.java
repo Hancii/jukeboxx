@@ -19,6 +19,15 @@ public class SingerManager {
         return DaoFactory.singerDao().getAll();
     }
 
+//    public List<Singer> searchByCategory(Category category) throws JukeBoxException {
+//        return DaoFactory.singerDao().searchByCategory(category);
+//    }
+
+    public Singer add(Singer singer) throws JukeBoxException {
+        validateSinger(singer);
+
+        return DaoFactory.singerDao().add(singer);
+    }
 
 
 }
