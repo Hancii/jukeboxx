@@ -36,6 +36,8 @@ public class CategoryManager {
         return categoryDao.update(category);
     }
 
-
+    public void delete(int id) throws JukeBoxException {
+        categoryDao.delete(id);
+    }
 
 }
