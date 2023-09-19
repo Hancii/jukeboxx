@@ -127,6 +127,19 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         }
     }
 
+    public int count() throws JukeBoxException {
+        StringBuilder builder = new StringBuilder();
+        builder.append("COUNT * FROM ")
+                .append(tableName);
+        try {
+            PreparedStatement stmt = getConnection().prepareStatement(builder.toString());
+            ResultSet resultSet = stmt.executeQuery();
+            return resultSet.getInt(0);
+        } catch (SQLException e) {
+            throw new JukeBoxException(e.getMessage(), e);
+        }
+    }
+
 
 }
 
