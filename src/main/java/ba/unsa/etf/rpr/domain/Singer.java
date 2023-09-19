@@ -24,11 +24,7 @@ public class Singer implements Idable {
 
     @Override
     public String toString() {
-        return "Singer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", category=" + category +
-                '}';
+        return  id + " " + name + " " + category;
     }
 
     @Override
