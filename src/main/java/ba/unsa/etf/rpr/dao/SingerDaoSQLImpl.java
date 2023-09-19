@@ -43,5 +43,14 @@ public class SingerDaoSQLImpl extends AbstractDao<Singer> implements SingerDao {
         }
     }
 
+    @Override
+    public Map<String, Object> object2row(Singer singer) {
+        Map<String, Object> row = new TreeMap<>();
+        row.put("id", singer.getId());
+        row.put("name", singer.getName());
+        row.put("category_id", singer.getCategory().getId());
+        return row;
+    }
+
 
 }
