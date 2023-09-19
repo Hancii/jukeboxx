@@ -26,7 +26,11 @@ public class SingerManager {
 //    public List<Singer> searchByCategory(Category category) throws JukeBoxException {
 //        return DaoFactory.singerDao().searchByCategory(category);
 //    }
-
+    /**
+     * Method that lets us add singers to database
+     * @return
+     * @throws JukeBoxException
+     */
     public Singer add(Singer singer) throws JukeBoxException {
         validateSinger(singer);
 
