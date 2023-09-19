@@ -30,6 +30,8 @@ public class SongManager {
         return DaoFactory.songDao().update(song);
     }
 
-
+    public void delete(int id) throws JukeBoxException {
+        DaoFactory.singerDao().delete(id);
+    }
 
 }
