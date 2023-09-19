@@ -31,6 +31,11 @@ public class CategoryManager {
         return categoryDao.add(category);
     }
 
+    public Category update(Category category) throws JukeBoxException {
+        validateCategoryName(category.getName());
+        return categoryDao.update(category);
+    }
+
 
 
 }
