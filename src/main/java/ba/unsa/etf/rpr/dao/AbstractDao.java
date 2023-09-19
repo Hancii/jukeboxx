@@ -45,6 +45,23 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         return AbstractDao.connection;
     }
 
+    public abstract T row2object(ResultSet rs) throws JukeBoxException;
+
+
+    public abstract Map<String, Object> object2row(T object) throws JukeBoxException;
+
+    public T getById(int id) throws JukeBoxException {
+        return executeQueryUnique("SELECT * FROM " + this.tableName + " WHERE id = ?", new Object[]{id});
+    }
+
+    public List<T> getAll() throws JukeBoxException {
+        return executeQuery("SELECT * FROM " + tableName, null);
+    }
+
+    public void delete(int id) throws JukeBoxException {
+
+    }
+
 
 }
 
