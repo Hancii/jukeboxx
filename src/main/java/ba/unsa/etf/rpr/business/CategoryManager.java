@@ -18,7 +18,11 @@ public class CategoryManager {
             throw new JukeBoxException("Category name must be between 3 and 45 chars");
         }
     }
-
+    /**
+     * Method that lets us get all the categories from the database
+     * @return
+     * @throws JukeBoxException
+     */
     public List<Category> getAll() throws JukeBoxException {
         return categoryDao.getAll();
     }
