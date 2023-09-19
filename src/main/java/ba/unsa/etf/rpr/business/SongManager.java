@@ -14,6 +14,10 @@ public class SongManager {
         }
     }
 
+    public List<Song> getAll() throws JukeBoxException {
+        return DaoFactory.songDao().getAll();
+    }
+
 
 
 }
