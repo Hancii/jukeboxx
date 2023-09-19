@@ -23,7 +23,12 @@ public class SongManager {
 
         return DaoFactory.songDao().add(song);
     }
-
+    /**
+     * Method which allows us to update a song
+     * in the Song table
+     * @param song we want to update
+     * @throws JukeBoxException
+     */
     public Song update(Song song) throws JukeBoxException {
         validateSong(song);
 
