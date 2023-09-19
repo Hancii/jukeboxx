@@ -7,6 +7,9 @@ import java.sql.*;
 import java.util.*;
 
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
+    private static Connection connection = null;
+    protected final String tableName;
+
 
 }
 
