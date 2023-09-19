@@ -42,7 +42,12 @@ public class SingerDaoSQLImpl extends AbstractDao<Singer> implements SingerDao {
             throw new JukeBoxException("Cannot convert Category row to object.", e);
         }
     }
-
+    /**
+     * Converts results set into Category object by reading appropriate columns
+     *
+     * @param  singer the singer to convert to Map
+     * @return      map that is converted from Category object
+     * */
     @Override
     public Map<String, Object> object2row(Singer singer) {
         Map<String, Object> row = new TreeMap<>();
